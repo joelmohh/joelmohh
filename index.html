@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>joelmo - Desenvolvedor Full Stack</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">Joelmo Dev</a>
+            <ul id="primary-navigation" class="nav-links" role="menu">
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+    </header>
+    <div class="menu-overlay" id="menu-overlay" hidden></div>
+
+    <!-- Hero Section -->
+    <section class="hero fade-scroll">
+        <div class="container hero-content">
+            <h1>joelmo</h1>
+            <p class="subtitle">Desenvolvedor Full Stack | Criando soluções inovadoras</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn">Ver Projetos</a>
+                <a href="#contact" class="btn btn-secondary">Entre em Contato</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-scroll">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Olá! Sou joelmo, um desenvolvedor full stack apaixonado por criar soluções 
+                        tecnológicas inovadoras e eficientes. Com experiência em desenvolvimento web 
+                        e mobile, trabalho com diversas tecnologias modernas para entregar projetos 
+                        de alta qualidade.
+                    </p>
+                    <p>
+                        Meu foco está em escrever código limpo, escalável e bem documentado. 
+                        Estou sempre buscando aprender novas tecnologias e melhores práticas 
+                        para criar produtos que realmente fazem a diferença.
+                    </p>
+                    <p>
+                        Acredito que a tecnologia tem o poder de transformar ideias em realidade 
+                        e estou comprometido em entregar soluções que superem as expectativas.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Projetos Completos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Tecnologias</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Dedicação</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills fade-scroll">
+        <div class="container">
+            <h2 class="section-title">Skills & Tecnologias</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-laptop-code category-icon"></i>
+                        <h3>Frontend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-html5-plain colored"></i>
+                            <span class="skill-name">HTML5</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-css3-plain colored"></i>
+                            <span class="skill-name">CSS3</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-javascript-plain colored"></i>
+                            <span class="skill-name">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-server category-icon"></i>
+                        <h3>Backend</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-nodejs-plain colored"></i>
+                            <span class="skill-name">Node.js</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-express-original"></i>
+                            <span class="skill-name">Express</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-database category-icon"></i>
+                        <h3>Database</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-mongodb-plain colored"></i>
+                            <span class="skill-name">MongoDB</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-mysql-plain colored"></i>
+                            <span class="skill-name">MySQL</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-firebase-plain colored"></i>
+                            <span class="skill-name">Firebase</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-category-header">
+                        <i class="fas fa-tools category-icon"></i>
+                        <h3>Tools & DevOps</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-git-plain colored"></i>
+                            <span class="skill-name">Git</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-vscode-plain colored"></i>
+                            <span class="skill-name">VS Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <i class="skill-icon devicon-github-original"></i>
+                            <span class="skill-name">GitHub</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects fade-scroll">
+        <div class="container">
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div id="projects-container" class="projects-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Carregando projetos do GitHub...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-scroll">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <a href="mailto:me@joelmo.dev">me@joelmo.dev</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-github"></i>
+                        <h3>GitHub</h3>
+                        <a href="https://github.com/joelmohh" target="_blank">@joelmohh</a>
+                    </div>
+                    <div class="contact-card">
+                        <i class="fab fa-discord"></i>
+                        <h3>Discord</h3>
+                        <p style="margin:0.2rem 0 0.4rem; color:#555;">joel_m0</p>
+                        <small style="color:#777;">ID: 865270316259606599</small>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com/joelmohh" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="#contact" class="social-link" title="Discord: joel_m0">
+                        <i class="fab fa-discord"></i>
+                    </a>
+                    <a href="mailto:me@joelmo.dev" class="social-link">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 joelmo. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart" style="color: #ef4444;"></i> e muito café</p>
+        </div>
+    </footer>
+
+    <script src="assets/main.js"></script>
+</body>
+</html>
