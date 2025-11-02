@@ -124,3 +124,28 @@ window.addEventListener('DOMContentLoaded', () => {
     updateIcon();
   });
 });
+
+// FAQ accordion
+window.addEventListener('DOMContentLoaded', () => {
+  const items = Array.from(document.querySelectorAll('.faq-item'));
+  items.forEach((item) => {
+    const button = item.querySelector('.faq-question');
+    if (!button) return;
+
+    button.addEventListener('click', () => {
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+
+      if (!expanded) {
+        items.forEach((other) => {
+          if (other === item) return;
+          other.classList.remove('is-open');
+          const otherButton = other.querySelector('.faq-question');
+          otherButton && otherButton.setAttribute('aria-expanded', 'false');
+        });
+      }
+
+      button.setAttribute('aria-expanded', String(!expanded));
+      item.classList.toggle('is-open', !expanded);
+    });
+  });
+});
