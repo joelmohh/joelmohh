@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>joelmo - Desenvolvedor Full Stack</title>
+    <title>Joelmo - Desenvolvedor Full Stack</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <link rel="stylesheet" href="assets/style.css">
+   
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <nav class="container">
-            <a href="#" class="logo">Joelmo Dev</a>
+            <a href="#" class="logo">Joelmo <div class="logo-dot"></div> Dev</a>
             <ul id="primary-navigation" class="nav-links" role="menu">
                 <li><a href="#about">Sobre</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#process">Processo</a></li>
-                <li><a href="#experience">Experiência</a></li>
-                <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#testimonials">Depoimentos</a></li>
-                <li><a href="#faq">FAQ</a></li>
                 <li><a href="#contact">Contato</a></li>
             </ul>
             <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
-                <i class="fas fa-moon"></i>
-            </button>
-            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="primary-navigation">
+                        <i class="fas fa-moon"></i>
+                    </button>
+            <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false"
+                aria-controls="primary-navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
@@ -41,40 +42,28 @@
     <section class="hero fade-scroll">
         <div class="container hero-content">
             <div class="hero-copy">
-                <span class="hero-eyebrow">Disponível para colaborações remotas</span>
-                <h1>Produtos digitais completos, com estratégia, tecnologia moderna e obsessão pelo usuário.</h1>
-                <p class="subtitle">Sou joelmo, desenvolvedor full stack que lidera do discovery ao deploy. Transformo objetivos de negócio em plataformas escaláveis, acessíveis e fáceis de evoluir.</p>
+                <span class="hero-eyebrow">Disponivel para freelance</span>
+                <h1 class="logo">joelmo <div class="logo-dot"></div> dev</h1>
+                <p class="subtitle">Sou joelmo, desenvolvedor full stack que lidera do discovery ao deploy. Transformo
+                    objetivos de negócio em plataformas escaláveis, acessíveis e fáceis de evoluir.</p>
                 <div class="hero-actions">
-                    <a href="#projects" class="btn">Ver Projetos</a>
-                    <a href="mailto:me@joelmo.dev" class="btn btn-secondary">Agendar conversa</a>
-                </div>
-                <div class="hero-stats">
-                    <div class="hero-stat">
-                        <span class="hero-stat-value">15x</span>
-                        <span class="hero-stat-label">crescimento médio em métricas-chave</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-value">3+</span>
-                        <span class="hero-stat-label">anos construindo produtos digitais</span>
-                    </div>
-                    <div class="hero-stat">
-                        <span class="hero-stat-value">10+</span>
-                        <span class="hero-stat-label">lançamentos end-to-end</span>
-                    </div>
+                    <a href="#projects" class="btn btn-lg btn-primary">Meus projetos</a>
+                    <a href="mailto:me@joelmo.dev" class="btn btn-secondary">Entre em contato</a>
                 </div>
             </div>
             <div class="hero-card">
                 <div class="hero-card-header">
                     <span class="status-dot"></span>
-                    <span>Stack atual</span>
+                    <span>Projeto atual</span>
                 </div>
                 <ul class="hero-stack">
-                    <li><i class="devicon-nextjs-original"></i> Next.js & React</li>
-                    <li><i class="devicon-nodejs-plain"></i> Node.js + TypeScript</li>
+                    <li><i class="fa-brands fa-node-js"></i> Node.js + JavaScript</li>
+                    <li><i class="fa-brands fa-html5"></i> HTML + CSS</li>
                     <li><i class="devicon-docker-plain"></i> Docker & CI/CD</li>
-                    <li><i class="devicon-aws-plain"></i> AWS & Cloudflare</li>
+                    <li><i class="fa-brands fa-cloudflare"></i> AWS & Cloudflare</li>
                 </ul>
-                <a href="#contact" class="hero-card-cta">Vamos construir algo juntos <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact" class="hero-card-cta">Vamos construir algo juntos <i
+                        class="fas fa-arrow-right"></i></a>
             </div>
         </div>
     </section>
@@ -85,29 +74,19 @@
             <h2 class="section-title">Sobre Mim</h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>
-                        Olá! Sou joelmo, um desenvolvedor full stack apaixonado por reduzir atrito entre ideias e execução. Trabalho próximo de times de produto, marketing e operações para tirar projetos do zero e ampliar plataformas existentes.
-                    </p>
-                    <p>
-                        Minha abordagem combina discovery ágil, arquitetura modular, UX orientada a dados e entrega contínua. Da concepção à observabilidade, lidero ciclos curtos que reduzem riscos e aceleram validações.
-                    </p>
-                    <p>
-                        Acredito em relações transparentes, comunicação constante e documentação clara. Cada entrega precisa ser sustentável para a equipe e valiosa para quem usa.
-                    </p>
                     <ul class="about-highlights">
-                        <li><strong>Especialista em stacks JavaScript/TypeScript</strong> para web, mobile e automações.</li>
-                        <li><strong>Experiência com times distribuídos</strong> em contextos de produto, consultoria e freelancing.</li>
-                        <li><strong>Foco em performance e acessibilidade</strong> com monitoramento contínuo e métricas de UX.</li>
+                        <li><strong>Especialista em stacks JavaScript/TypeScript</strong> para web, mobile e automações.
+                        </li>
+                        <li><strong>Experiência com times distribuídos</strong> em contextos de produto, consultoria e
+                            freelancing.</li>
+                        <li><strong>Foco em performance e acessibilidade</strong> com monitoramento contínuo e métricas
+                            de UX.</li>
                     </ul>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
                         <div class="stat-number">10+</div>
                         <div class="stat-label">Produtos entregues</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">40%</div>
-                        <div class="stat-label">redução média de tempo de entrega</div>
                     </div>
                     <div class="stat-card">
                         <div class="stat-number">100%</div>
@@ -128,7 +107,8 @@
                         <i class="fas fa-layer-group"></i>
                     </div>
                     <h3>Produtos end-to-end</h3>
-                    <p>Do planejamento à publicação. Conduzo projetos completos com foco em métricas, performance e experiência do usuário.</p>
+                    <p>Do planejamento à publicação. Conduzo projetos completos com foco em métricas, performance e
+                        experiência do usuário.</p>
                     <ul>
                         <li>Descoberta e definição de escopo</li>
                         <li>Design system funcional</li>
@@ -140,7 +120,8 @@
                         <i class="fas fa-code"></i>
                     </div>
                     <h3>Desenvolvimento moderno</h3>
-                    <p>Integro stacks modernas, arquitetura limpa e padrões sólidos para garantir código sustentável e escalável.</p>
+                    <p>Integro stacks modernas, arquitetura limpa e padrões sólidos para garantir código sustentável e
+                        escalável.</p>
                     <ul>
                         <li>Frontends reativos</li>
                         <li>APIs resilientes</li>
@@ -152,7 +133,8 @@
                         <i class="fas fa-rocket"></i>
                     </div>
                     <h3>Otimização & growth</h3>
-                    <p>Experimentos orientados a dados, monitoramento e observabilidade para manter produtos sempre evoluindo.</p>
+                    <p>Experimentos orientados a dados, monitoramento e observabilidade para manter produtos sempre
+                        evoluindo.</p>
                     <ul>
                         <li>Melhoria contínua</li>
                         <li>Observabilidade e alertas</li>
@@ -163,233 +145,7 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="process fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Meu processo de trabalho</h2>
-            <div class="process-grid">
-                <article class="process-step">
-                    <span class="process-step-number">01</span>
-                    <h3>Imersão &amp; diagnóstico</h3>
-                    <p>Entrevistas rápidas, revisão de métricas e entendimento profundo do contexto para mapear oportunidades reais.</p>
-                    <ul>
-                        <li>Workshops de descoberta</li>
-                        <li>Mapeamento de stakeholders</li>
-                        <li>Definição de KPIs e escopo inicial</li>
-                    </ul>
-                </article>
-                <article class="process-step">
-                    <span class="process-step-number">02</span>
-                    <h3>Arquitetura &amp; design do produto</h3>
-                    <p>Transformo requisitos em arquitetura modular e jornadas claras, com protótipos clicáveis quando necessário.</p>
-                    <ul>
-                        <li>Design system pragmático</li>
-                        <li>Roadmap técnico incremental</li>
-                        <li>Estratégia de dados e integrações</li>
-                    </ul>
-                </article>
-                <article class="process-step">
-                    <span class="process-step-number">03</span>
-                    <h3>Entrega contínua &amp; evolução</h3>
-                    <p>Sprints curtas com automação de testes, observabilidade e documentação para garantir releases previsíveis.</p>
-                    <ul>
-                        <li>CI/CD com qualidade</li>
-                        <li>Monitoramento e alertas</li>
-                        <li>Insights para próximos ciclos</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="experience fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Experiência & Formação</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <span class="timeline-year">2023 - Atual</span>
-                    <div class="timeline-content">
-                        <h3>Desenvolvedor Full Stack • Projetos independentes</h3>
-                        <p>Integração com squads de startups e pequenas empresas, liderando integrações complexas, automações e evolução contínua da experiência.</p>
-                        <div class="timeline-tags">
-                            <span>Next.js</span>
-                            <span>Node.js</span>
-                            <span>PostgreSQL</span>
-                            <span>CI/CD</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-year">2021 - 2023</span>
-                    <div class="timeline-content">
-                        <h3>Freelancer • Projetos web e mobile</h3>
-                        <p>Desenvolvimento de aplicativos responsivos e PWAs, com foco em escalabilidade e integrações com serviços de terceiros.</p>
-                        <div class="timeline-tags">
-                            <span>React Native</span>
-                            <span>Firebase</span>
-                            <span>UX Research</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <span class="timeline-year">2019 - 2021</span>
-                    <div class="timeline-content">
-                        <h3>Formação • Ciência da Computação</h3>
-                        <p>Base sólida em algoritmos, estruturas de dados e arquitetura de software, com participação em projetos de pesquisa e extensão.</p>
-                        <div class="timeline-tags">
-                            <span>Algoritmos</span>
-                            <span>Arquitetura</span>
-                            <span>Comunidades</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta fade-scroll">
-        <div class="container cta-content">
-            <div>
-                <h2>Pronto para acelerar seu próximo projeto?</h2>
-                <p>Vamos conversar sobre desafios técnicos, roadmap e como posso agregar ao seu time.</p>
-            </div>
-            <a href="https://cal.com" target="_blank" class="btn btn-light">Agendar uma call</a>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Skills & Tecnologias</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-laptop-code category-icon"></i>
-                        <h3>Frontend</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-html5-plain colored"></i>
-                            <span class="skill-name">HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-css3-plain colored"></i>
-                            <span class="skill-name">CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-javascript-plain colored"></i>
-                            <span class="skill-name">JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-react-original colored"></i>
-                            <span class="skill-name">React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-nextjs-original"></i>
-                            <span class="skill-name">Next.js</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-server category-icon"></i>
-                        <h3>Backend</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-nodejs-plain colored"></i>
-                            <span class="skill-name">Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-express-original"></i>
-                            <span class="skill-name">Express</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-nestjs-plain colored"></i>
-                            <span class="skill-name">NestJS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-graphql-plain colored"></i>
-                            <span class="skill-name">GraphQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-database category-icon"></i>
-                        <h3>Database</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-mongodb-plain colored"></i>
-                            <span class="skill-name">MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-mysql-plain colored"></i>
-                            <span class="skill-name">MySQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-firebase-plain colored"></i>
-                            <span class="skill-name">Firebase</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-postgresql-plain colored"></i>
-                            <span class="skill-name">PostgreSQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-prisma-plain colored"></i>
-                            <span class="skill-name">Prisma ORM</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <div class="skill-category-header">
-                        <i class="fas fa-tools category-icon"></i>
-                        <h3>Tools & DevOps</h3>
-                    </div>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-git-plain colored"></i>
-                            <span class="skill-name">Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-vscode-plain colored"></i>
-                            <span class="skill-name">VS Code</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-github-original"></i>
-                            <span class="skill-name">GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-docker-plain colored"></i>
-                            <span class="skill-name">Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="skill-icon devicon-amazonwebservices-plain colored"></i>
-                            <span class="skill-name">AWS</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Projetos em Destaque</h2>
-            <div id="projects-container" class="projects-grid">
-                <div class="loading">
-                    <div class="spinner"></div>
-                    <p>Carregando projetos do GitHub...</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
+    <!-- Testimonials Section 
     <section id="testimonials" class="testimonials fade-scroll">
         <div class="container">
             <h2 class="section-title">Feedback de parceiros e clientes</h2>
@@ -426,50 +182,51 @@
                 </article>
             </div>
         </div>
+    </section>-->
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience fade-scroll">
+        <div class="container">
+            <h2 class="section-title">Experiência & Formação</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <span class="timeline-year">2021 - Atual</span>
+                    <div class="timeline-content">
+                        <h3>Desenvolvedor Full Stack • Projetos independentes</h3>
+                        <p>Integração com squads de startups e pequenas empresas, liderando integrações complexas,
+                            automações e evolução contínua da experiência.</p>
+                        <div class="timeline-tags">
+                            <span>Next.js</span>
+                            <span>Node.js</span>
+                            <span>PostgreSQL</span>
+                            <span>CI/CD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- FAQ Section -->
-    <section id="faq" class="faq fade-scroll">
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects fade-scroll">
         <div class="container">
-            <h2 class="section-title">Perguntas frequentes</h2>
-            <div class="faq-list">
-                <article class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Como funciona o início de um projeto?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Começamos com uma conversa para entender objetivos, métricas e contexto. Em seguida, envio uma proposta clara com etapas, entregáveis e estimativas de investimento.</p>
-                    </div>
-                </article>
-                <article class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Você pode atuar junto com meu time interno?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Sim! Já colaborei com squads multidisciplinares, atuando como tech lead temporário ou reforço para acelerar entregas sem perder qualidade.</p>
-                    </div>
-                </article>
-                <article class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Quais tecnologias você utiliza?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Trabalho principalmente com Next.js, React, Node.js, TypeScript, NestJS, PostgreSQL e integrações com serviços em nuvem como AWS, Vercel e Cloudflare.</p>
-                    </div>
-                </article>
-                <article class="faq-item">
-                    <button class="faq-question" aria-expanded="false">
-                        <span>Você ajuda com manutenção após o lançamento?</span>
-                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
-                    </button>
-                    <div class="faq-answer">
-                        <p>Ofereço pacotes de acompanhamento para monitoramento, evolução contínua, implementação de novas features e alinhamento de roadmap.</p>
-                    </div>
-                </article>
+            <h2 class="section-title">Projetos em Destaque</h2>
+            <div id="projects-container" class="projects-grid">
+                <div class="loading">
+                    <div class="spinner"></div>
+                    <p>Carregando projetos do GitHub...</p>
+                </div>
             </div>
+        </div>
+    </section>
+    <section class="cta fade-scroll">
+        <div class="container cta-content">
+            <div>
+                <h2>Pronto para realizar seu próximo projeto?</h2>
+                <p>Vamos conversar sobre desafios técnicos, roadmap e como realizar seus objetivos.</p>
+            </div>
+            <a href="#contact" class="btn btn-primary btn-lg">Entre em contato</a>
         </div>
     </section>
 
@@ -492,21 +249,8 @@
                     <div class="contact-card">
                         <i class="fab fa-discord"></i>
                         <h3>Discord</h3>
-                        <p class="contact-handle">joel_m0</p>
-                        <small class="contact-note">ID: 865270316259606599</small>
+                        <a href="https://discord.com/users/865270316259606599" target="_blank">@joel_m0</a>
                     </div>
-                </div>
-                
-                <div class="social-links">
-                    <a href="https://github.com/joelmohh" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="#contact" class="social-link" title="Discord: joel_m0">
-                        <i class="fab fa-discord"></i>
-                    </a>
-                    <a href="mailto:me@joelmo.dev" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
                 </div>
             </div>
         </div>
@@ -515,11 +259,12 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 joelmo. Todos os direitos reservados.</p>
-            <p>Desenvolvido com <i class="fas fa-heart" aria-hidden="true"></i> tecnologia, empatia e café.</p>
+            <p>&copy; 2025. Todos os direitos reservados.</p>
+            <p>Desenvolvido com <i class="fas fa-heart" aria-hidden="true"></i> e café.</p>
         </div>
     </footer>
 
-    <script src="assets/main.js"></script>
+    <script src="public/js/main.js"></script>
 </body>
+
 </html>
