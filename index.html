@@ -24,18 +24,24 @@
             <ul id="primary-navigation" class="nav-links" role="menu">
                 <li><a href="#about">Sobre</a></li>
                 <li><a href="#projects">Projetos</a></li>
+                <li><a href="#testimonials">Depoimentos</a></li>
                 <li><a href="#contact">Contato</a></li>
-            </ul>
-            <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
                         <i class="fas fa-moon"></i>
-                    </button>
+            </button>
+            </ul>
+            
             <button class="mobile-menu-btn" aria-label="Abrir menu" aria-expanded="false"
                 aria-controls="primary-navigation">
                 <i class="fas fa-bars"></i>
             </button>
         </nav>
     </header>
-    <div class="menu-overlay" id="menu-overlay" hidden></div>
+    <div class="menu-overlay" id="menu-overlay" hidden>
+        <button class="theme-toggle" aria-label="Alternar tema" title="Alternar tema">
+                        <i class="fas fa-moon"></i>
+            </button>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero fade-scroll">
@@ -43,146 +49,15 @@
             <div class="hero-copy">
                 <span class="hero-eyebrow">Disponivel para freelance</span>
                 <h1 class="logo">joelmo <div class="logo-dot"></div> dev</h1>
-                <p class="subtitle">Sou joelmo, desenvolvedor full stack que lidera do discovery ao deploy. Transformo
-                    objetivos de negócio em plataformas escaláveis, acessíveis e fáceis de evoluir.</p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-lg btn-primary">Meus projetos</a>
                     <a href="mailto:me@joelmo.dev" class="btn btn-secondary">Entre em contato</a>
                 </div>
             </div>
-            <div class="hero-card">
-                <div class="hero-card-header">
-                    <span class="status-dot"></span>
-                    <span>Projeto atual</span>
-                </div>
-                <ul class="hero-stack">
-                    <li><i class="fa-brands fa-node-js"></i> Node.js + JavaScript</li>
-                    <li><i class="fa-brands fa-html5"></i> HTML + CSS</li>
-                    <li><i class="devicon-docker-plain"></i> Docker & CI/CD</li>
-                    <li><i class="fa-brands fa-cloudflare"></i> AWS & Cloudflare</li>
-                </ul>
-                <a href="#contact" class="hero-card-cta">Vamos construir algo juntos <i
-                        class="fas fa-arrow-right"></i></a>
-            </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <ul class="about-highlights">
-                        <li><strong>Especialista em stacks JavaScript/TypeScript</strong> para web, mobile e automações.
-                        </li>
-                        <li><strong>Experiência com times distribuídos</strong> em contextos de produto, consultoria e
-                            freelancing.</li>
-                        <li><strong>Foco em performance e acessibilidade</strong> com monitoramento contínuo e métricas
-                            de UX.</li>
-                    </ul>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number">10+</div>
-                        <div class="stat-label">Produtos entregues</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number">100%</div>
-                        <div class="stat-label">foco em resultado</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Como posso ajudar</h2>
-            <div class="services-grid">
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h3>Produtos end-to-end</h3>
-                    <p>Do planejamento à publicação. Conduzo projetos completos com foco em métricas, performance e
-                        experiência do usuário.</p>
-                    <ul>
-                        <li>Descoberta e definição de escopo</li>
-                        <li>Design system funcional</li>
-                        <li>Entrega contínua</li>
-                    </ul>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h3>Desenvolvimento moderno</h3>
-                    <p>Integro stacks modernas, arquitetura limpa e padrões sólidos para garantir código sustentável e
-                        escalável.</p>
-                    <ul>
-                        <li>Frontends reativos</li>
-                        <li>APIs resilientes</li>
-                        <li>Testes automatizados</li>
-                    </ul>
-                </article>
-                <article class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Otimização & growth</h3>
-                    <p>Experimentos orientados a dados, monitoramento e observabilidade para manter produtos sempre
-                        evoluindo.</p>
-                    <ul>
-                        <li>Melhoria contínua</li>
-                        <li>Observabilidade e alertas</li>
-                        <li>KPIs e relatórios</li>
-                    </ul>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section 
-    <section id="testimonials" class="testimonials fade-scroll">
-        <div class="container">
-            <h2 class="section-title">Feedback de parceiros e clientes</h2>
-            <div class="testimonials-grid">
-                <article class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="avatar" aria-hidden="true">GC</div>
-                        <div>
-                            <h3>Gabriela Costa</h3>
-                            <span>Head de Produto • SaaS B2B</span>
-                        </div>
-                    </div>
-                    <p>“O Joelmo conseguiu estruturar nossa plataforma em poucas semanas. Trouxe clareza técnica para o time e entregou automações que reduziram o tempo de onboarding em 60%.”</p>
-                </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="avatar" aria-hidden="true">LF</div>
-                        <div>
-                            <h3>Lucas Freitas</h3>
-                            <span>Founder • HealthTech</span>
-                        </div>
-                    </div>
-                    <p>“Impressiona a velocidade com que ele entende o problema e entrega. Sempre com documentação, testes e um olhar atento para métricas de produto.”</p>
-                </article>
-                <article class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="avatar" aria-hidden="true">AP</div>
-                        <div>
-                            <h3>Ana Paula Souza</h3>
-                            <span>UX Lead • Consultoria digital</span>
-                        </div>
-                    </div>
-                    <p>“Parceria muito fluida. Joelmo conecta tecnologia e experiência do usuário com habilidade rara. Cada release vinha acompanhada de insights valiosos.”</p>
-                </article>
-            </div>
-        </div>
-    </section>-->
-
+    
     <!-- Experience Section -->
     <section id="experience" class="experience fade-scroll">
         <div class="container">
@@ -217,15 +92,6 @@
                     <p>Carregando projetos do GitHub...</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="cta fade-scroll">
-        <div class="container cta-content">
-            <div>
-                <h2>Pronto para realizar seu próximo projeto?</h2>
-                <p>Vamos conversar sobre desafios técnicos, roadmap e como realizar seus objetivos.</p>
-            </div>
-            <a href="#contact" class="btn btn-primary btn-lg">Entre em contato</a>
         </div>
     </section>
 
@@ -265,6 +131,5 @@
 
     <script src="public/js/main.js"></script>
 </body>
-
 
 </html>
