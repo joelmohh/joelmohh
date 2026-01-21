@@ -44,7 +44,7 @@ async function getRepos() {
             grid.appendChild(card);
         });
     } catch (error) {
-        grid.innerHTML = '<p>Erro ao carregar repositórios.</p>';
+        grid.innerHTML = '<p>Fail to load repositories.</p>';
         console.error(error);
     }
 }
