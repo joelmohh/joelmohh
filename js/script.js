@@ -5,9 +5,20 @@ menuToggle.addEventListener('click', () => {
     navContainer.classList.toggle('active');
 });
 
-document.querySelectorAll('.links a').forEach(link => {
-    link.addEventListener('click', () => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', (event) => {
         navContainer.classList.remove('active');
+
+        const targetId = link.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+
+        if (!targetElement) {
+            return;
+        }
+
+        event.preventDefault();
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        history.pushState(null, '', targetId);
     });
 });
 
