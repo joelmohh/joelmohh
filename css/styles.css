@@ -1,14 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
 :root {
     --bg-color: #001524;
     --text-color: #ffffff;
     --header-bg: rgba(2, 43, 73, 0.27);
     --accent: #15616D;
+    --accent-soft: rgba(21, 97, 109, 0.15);
     --card-bg: #022b4945;
     --card-border: rgba(255, 255, 255, 0.05);
     --muted-text: #8892b0;
     --tech-text: #ccd6f6;
     --nav-mobile-bg: #001524;
+    --font-heading: 'Space Grotesk', 'Inter', sans-serif;
+    --font-body: 'Inter', -apple-system, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Courier New', monospace;
 }
 
 html,
@@ -40,9 +45,25 @@ body {
     color: var(--text-color);
     padding: 0;
     margin: 0;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-body);
     overflow-x: hidden;
     transition: background-color 0.3s, color 0.3s;
+}
+
+/*
+/  Base link styles — shared by every <a> on the page.
+/  Specific classes below (.main-link, .sub-link, .social-item, etc.)
+/  only need to declare what's DIFFERENT from this base.
+*/
+a {
+    color: inherit;
+    text-decoration: none;
+    font-family: inherit;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.link-strong {
+    font-weight: 800;
 }
 
 header {
@@ -63,7 +84,9 @@ header {
     display: flex;
     align-items: baseline;
     margin: 0;
+    font-family: var(--font-heading);
     font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .logo span {
@@ -96,9 +119,9 @@ header {
 }
 
 .links a {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 800;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
     position: relative;
 }
 
@@ -253,7 +276,7 @@ header {
 }
 
 .code-text {
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     color: var(--accent);
     font-size: 1rem;
     display: block;
@@ -261,11 +284,12 @@ header {
 }
 
 .hero h1 {
+    font-family: var(--font-heading);
     font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 900;
-    line-height: 1;
+    font-weight: 700;
+    line-height: 1.05;
     margin: 0 0 25px 0;
-    letter-spacing: -2px;
+    letter-spacing: -1.5px;
 }
 
 .hero p {
@@ -286,11 +310,11 @@ header {
     background: var(--accent);
     color: #fff;
     padding: 15px 35px;
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
     border-radius: 4px;
-    transition: 0.3s;
+    transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 .main-link:hover {
@@ -300,13 +324,11 @@ header {
 }
 
 .sub-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-weight: 800;
-    font-size: 0.9rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
     border-bottom: 2px solid var(--accent);
     padding-bottom: 2px;
-    transition: 0.3s;
 }
 
 .sub-link:hover {
@@ -341,6 +363,8 @@ header {
 }
 
 .section-header h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
     font-size: 2rem;
     margin-bottom: 40px;
     display: flex;
@@ -350,7 +374,7 @@ header {
 
 .section-header span {
     color: var(--accent);
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     font-size: 1.2rem;
 }
 
@@ -365,7 +389,7 @@ header {
     border: 1px solid var(--card-border);
     border-radius: 8px;
     padding: 30px;
-    transition: all 0.3s ease;
+    transition: border-color 0.3s ease, transform 0.3s ease;
     display: flex;
     flex-direction: column;
 }
@@ -375,17 +399,31 @@ header {
     transform: translateY(-5px);
 }
 
+/* Wrapper created by script.js around each card's inner elements.
+   Needs its own flex column so .project-desc's flex-grow actually
+   pushes .project-links to the bottom, and so every card in a row
+   lines up instead of having ragged heights. */
+.project-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
 .project-type {
     color: var(--accent);
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     font-size: 0.8rem;
-    font-weight: 800;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
     margin-bottom: 10px;
 }
 
 .project-card h3 {
+    font-family: var(--font-heading);
     margin: 0 0 15px 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: var(--text-color);
 }
 
@@ -407,7 +445,7 @@ header {
 }
 
 .project-tech li {
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     font-size: 0.75rem;
     color: var(--tech-text);
     opacity: 0.7;
@@ -434,9 +472,40 @@ header {
 .loading {
     grid-column: 1 / -1;
     text-align: center;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
     color: var(--muted-text);
     padding: 50px;
+}
+
+.project-card--extra {
+    display: none;
+}
+
+.project-card--extra.is-visible {
+    display: flex;
+}
+
+.show-more-btn {
+    all: unset;
+    box-sizing: border-box;
+    display: block;
+    width: fit-content;
+    margin: 40px auto 0;
+    padding: 12px 30px;
+    text-align: center;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    font-family: var(--font-mono);
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.show-more-btn:hover {
+    background-color: var(--accent);
+    color: #fff;
 }
 
 /*
@@ -449,11 +518,127 @@ header {
 }
 
 .contact .section-header h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
     font-size: 2rem;
     margin-bottom: 30px;
     display: flex;
     align-items: center;
     gap: 15px;
+}
+
+.contact-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--muted-text);
+}
+
+.form-group input,
+.form-group textarea {
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba(128, 128, 128, 0.05);
+    border: 1px solid var(--card-border);
+    border-radius: 4px;
+    padding: 12px 14px;
+    color: var(--text-color);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--muted-text);
+    opacity: 0.7;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+.form-submit-btn {
+    align-self: flex-start;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 14px 32px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.95rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: filter 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.form-submit-btn:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -10px var(--accent);
+}
+
+.form-note {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent);
+    line-height: 1.5;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.form-note.is-visible {
+    opacity: 1;
+    max-height: 100px;
+}
+
+.contact-side {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.contact-alt-label {
+    margin: 0;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--muted-text);
+    letter-spacing: 0.5px;
 }
 
 .contact-container {
@@ -476,11 +661,10 @@ header {
     padding: 15px;
     background: rgba(128, 128, 128, 0.05);
     border-radius: 4px;
-    text-decoration: none;
     color: var(--tech-text);
-    font-family: 'Courier New', monospace;
-    font-weight: 800;
-    transition: all 0.3s ease;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     border: 1px solid transparent;
 }
 
@@ -510,7 +694,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-family: 'Courier New', monospace;
+    font-family: var(--font-mono);
 }
 
 .copyright {
@@ -527,7 +711,6 @@ header {
 .footer-meta span a {
     color: var(--accent);
     font-weight: 800;
-    text-decoration: none;
 }
 
 .stack-icons {

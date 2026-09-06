@@ -30,14 +30,19 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 });
 
+const INITIAL_VISIBLE_REPOS = 6;
+
 function renderRepos(repos, grid) {
     grid.innerHTML = '';
 
-    repos.forEach(repo => {
-        if (repo.fork) return;
+    const visibleRepos = repos.filter(repo => !repo.fork);
 
+    visibleRepos.forEach((repo, index) => {
         const card = document.createElement('div');
         card.className = 'project-card';
+        if (index >= INITIAL_VISIBLE_REPOS) {
+            card.classList.add('project-card--extra');
+        }
 
         const content = document.createElement('div');
         content.className = 'project-content';
@@ -76,6 +81,40 @@ function renderRepos(repos, grid) {
         card.appendChild(content);
         grid.appendChild(card);
     });
+
+    setupShowMoreButton(grid, visibleRepos.length);
+}
+
+function setupShowMoreButton(grid, totalCount) {
+    const section = grid.closest('.projects');
+    let btn = section.querySelector('.show-more-btn');
+
+    if (totalCount <= INITIAL_VISIBLE_REPOS) {
+        if (btn) btn.remove();
+        return;
+    }
+
+    if (!btn) {
+        btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'show-more-btn';
+        section.appendChild(btn);
+
+        btn.addEventListener('click', () => {
+            const isExpanded = btn.classList.toggle('is-expanded');
+            grid.querySelectorAll('.project-card--extra').forEach(card => {
+                card.classList.toggle('is-visible', isExpanded);
+            });
+            updateShowMoreLabel(btn, totalCount, isExpanded);
+        });
+    }
+
+    updateShowMoreLabel(btn, totalCount, btn.classList.contains('is-expanded'));
+}
+
+function updateShowMoreLabel(btn, totalCount, isExpanded) {
+    const hiddenCount = totalCount - INITIAL_VISIBLE_REPOS;
+    btn.textContent = isExpanded ? 'See less' : `See more projects (${hiddenCount})`;
 }
 
 async function getRepos() {
@@ -90,7 +129,7 @@ async function getRepos() {
     }
 
     try {
-        const response = await fetch('https://api.github.com/users/joelmohh/repos?sort=updated&per_page=6');
+        const response = await fetch('https://api.github.com/users/joelmohh/repos?sort=updated&per_page=100');
         if (!response.ok) throw new Error(`GitHub API error: ${response.status}`);
         const repos = await response.json();
 
@@ -103,6 +142,18 @@ async function getRepos() {
 }
 
 getRepos();
+
+const contactForm = document.querySelector('#contact-form');
+const formNote = document.querySelector('#form-note');
+
+if (contactForm && formNote) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        formNote.textContent = 'This form is front-end only for now — no message was sent. Reach me through one of the channels on the right instead. 👉';
+        formNote.classList.add('is-visible');
+        contactForm.reset();
+    });
+}
 
 const themeToggleBtn = document.querySelector('.theme-toggle');
 
